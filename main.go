@@ -15,6 +15,7 @@ import (
 	"github.com/bootdotdev/learn-cicd-starter/internal/database"
 
 	_ "github.com/tursodatabase/libsql-client-go/libsql"
+	"log/slog"
 	"time"
 )
 
@@ -95,6 +96,6 @@ func main() {
 		ReadHeaderTimeout: 10 * time.Second,
 	}
 
-	log.Printf("Serving on port: %q\n", port)
+	slog.Info("Serving on port", "port", port)
 	log.Fatal(srv.ListenAndServe())
 }
