@@ -8,10 +8,10 @@ import (
 
 func TestGetAPIKey(t *testing.T) {
 	tests := []struct {
-		name        string
-		headers     http.Header
-		wantKey     string
-		wantErr     error
+		name    string
+		headers http.Header
+		wantKey string
+		wantErr error
 	}{
 		{
 			name:    "brak nagłówka Authorization",
